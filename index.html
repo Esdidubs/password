@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <main>
+        <!--Toggle buttons between the password and passphrase generators-->
+        <div class="navs">
+            <button id="passwordBtn" onclick="buttonTest(this)" class="active">Password</button>
+            <button id="passphraseBtn" onclick="buttonTest(this)" class="inactive">Passphrase</button>
+        </div>
+        
+        <!--Password Generator-->
+        <form id="password">
+            <div class="numberBox">
+                <label for="numChar">Number of characters</label>
+                <input type='number' id='numChar' name="numChar" value="12" min="1" max="256">
+            </div>
+            <div class="option">
+                <input type="checkbox" id="lower" checked> Lowercase Letters
+            </div>
+            <div class="option">
+                <input type="checkbox" id="upper"> Uppercase Letters
+            </div>
+            <div class="option">
+                <input type="checkbox" id="num"> Numbers
+            </div>
+            <div class="option">
+                <input type="checkbox" id="sym"> Symbols
+            </div>
+            <div class="subBtn">
+                <button id="generate" onclick="userSubmitted()" class="subBtn">Generate</button>
+            </div>        
+        </form>
+
+        <!--Passphrase Generator-->
+        <form id="passphrase">
+            <div class="numberBox">
+                <label for="numWords">Number of words to use</label>
+                <input type='number' id='numWords' name='numWords' value="4" min="1" max="20">
+            </div>
+            <div class="option">
+                <input type="checkbox" id="spaces" checked> With Spaces <br>
+            </div>
+            <div class="subBtn">
+                <button id="phraseBtn" onclick="phraseSub()">Generate</button>
+            </div>   
+        </form>
+
+        <!--The actual password-->
+        <h2 id="pw"></h2>
+    </main>
+
+    <script src="elements.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

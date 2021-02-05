@@ -1,0 +1,112 @@
+/*=====================================
+            Main Styles
+=====================================*/
+
+html {
+	font-size: 62.5%;
+}
+
+body {	
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    align-items: center;
+	display: flex;
+	flex-direction: column;	
+    margin-top: 5rem;
+}
+
+div {
+    margin: 1rem;
+}
+
+/*=====================================
+            Form Styles
+=====================================*/
+
+#numChar,
+#numWords {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+}
+
+
+.numberBox {
+    display: flex;
+	flex-direction: column;
+}
+
+#password,
+#passphrase {
+    font-size: 2rem;
+}
+
+/*=====================================
+            Password Styles
+=====================================*/
+
+#pw {
+    font-size: 2.5rem;
+    margin: 20px 0;	
+    max-width: 80%;
+}
+
+/*=====================================
+            Button Styles
+=====================================*/
+
+.active, 
+button:hover {
+    background-color: #0f7eae;
+    color: #fff;
+}
+
+.inactive {
+    background-color: #fff;
+    color: #0f7eae;
+    
+}
+
+.subBtn {
+    text-align: center;
+}
+
+button {
+    background-color: #0f7eae;
+    border: 2px solid #0f7eae;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.2s;
+    width: 15rem;
+}
+
+button:hover {	
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+button:hover::after {	
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+}
+
+button:active,
+button:focus {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	outline: none;
+	transform: translateY(-1px);	
+}
+
+
+
+
+
+
