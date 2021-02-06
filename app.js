@@ -26,6 +26,8 @@ function buttonTest(element){
         if(document.getElementById("password").style.display == "none"){
             pass = ``;
             document.getElementById("pw").innerHTML = pass;
+            document.getElementById("pw").oninput();
+
         }
 
         // display and hide proper elements based on button
@@ -40,6 +42,7 @@ function buttonTest(element){
         if(document.getElementById("passphrase").style.display == "none"){
             pass = ``;
             document.getElementById("pw").innerHTML = pass;
+            document.getElementById("pw").oninput();
         }
 
         // display and hide proper elements based on button
@@ -78,6 +81,7 @@ function makePassword(){
     mixRequirements();
     createPassString();
     document.getElementById("pw").innerHTML = pass;
+    document.getElementById("pw").oninput();
 };
 
 // updates the requirements array with user-selected rules
@@ -127,13 +131,14 @@ function createPassString(){
     }   
 };
 
-//
+// 
 function phraseSub(){
     event.preventDefault();
     pass=``;
     numWords = document.getElementById("numWords").value;
     spaces = document.getElementById("spaces").checked;
 
+    // grabs a random word from the array until the length is reached. 
     for(let i=0; i<numWords; i++){
         let tempPass = passphrases[Math.floor(Math.random() * passphrases.length)];
         if(spaces){
@@ -141,6 +146,18 @@ function phraseSub(){
         }
         pass += tempPass;
     }
+
+    // removes final space
     pass = pass.trim();
+    
     document.getElementById("pw").innerHTML = pass;
+    document.getElementById("pw").oninput();
+};
+
+// copies the text from the textarea when the button is pressed
+function copyText() {
+    let c = document.getElementById("pw");
+    c.select();
+    c.setSelectionRange(0, 99999)
+    document.execCommand("copy");
 };
