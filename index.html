@@ -51,9 +51,11 @@
                 <button id="phraseBtn" onclick="phraseSub()">Generate</button>
             </div>   
         </form>
-
+        <div class="subBtn">
+            <button id="copyBtn" onclick="copyText()">Copy</button>
+        </div> 
         <!--The actual password-->
-        <h2 id="pw"></h2>
+        <textarea id="pw" readonly  oninput='this.style.height = "";this.style.height = this.scrollHeight + 10 + "px"'></textarea>
     </main>
 
     <script src="elements.js"></script>
