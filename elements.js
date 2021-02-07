@@ -986,5 +986,5 @@ const passphrases = [
     'yield', 'yin', 'yippee',"yo-yo",'yodel', 'yoga', 'yogurt', 'yonder',
     'yoyo', 'yummy', 'zap', 'zealous', 'zebra', 'zen', 'zeppelin', 'zero',
     'zestfully', 'zesty', 'zigzagged', 'zipfile', 'zipping', 'zippy', 'zips', 'zit',
-    'zodiac', 'zombie', 'zone', 'zoning', 'zookeeper', 'zoologist', 'zoology', 'zoom',
+    'zodiac', 'zombie', 'zone', 'zoning', 'zookeeper', 'zoologist', 'zoology', 'zoom'
 ];
