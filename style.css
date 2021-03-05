@@ -56,7 +56,6 @@ div {
     resize: none;
     text-align: center;
     width: 30rem;
-    word-wrap: break-word;
 }
 
 #pw:active,
@@ -105,20 +104,8 @@ button:hover {
     transform: translateY(-3px);
 }
 
-button:hover::after {	
-    opacity: 0;
-    transform: scaleX(1.4) scaleY(1.6);
-}
-
 button:active,
 button:focus {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	outline: none;
 	transform: translateY(-1px);	
 }
-
-
-
-
-
-
