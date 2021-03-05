@@ -11,7 +11,6 @@ let requirements = [];
 let mixedRequire = [];
 
 // Vars for passphrase generator
-let passphrase = false;
 let spaces = true;
 let numWords = 4;
 
@@ -131,7 +130,7 @@ function createPassString(){
     }   
 };
 
-// 
+// makes a password using the passphrases array
 function phraseSub(){
     event.preventDefault();
     pass=``;
@@ -158,6 +157,6 @@ function phraseSub(){
 function copyText() {
     let c = document.getElementById("pw");
     c.select();
-    c.setSelectionRange(0, 99999)
+    //c.setSelectionRange(0, 99999)
     document.execCommand("copy");
 };
